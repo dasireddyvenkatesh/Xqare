@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Launching Soon</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#050510;
+color:white;
+}
+
+/* PARTICLES */
+
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+/* HERO */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+padding:40px;
+
+}
+
+.container{
+
+max-width:1000px;
+width:100%;
+
+text-align:center;
+
+padding:70px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,0.05);
+
+backdrop-filter:blur(25px);
+
+border:1px solid rgba(255,255,255,0.1);
+
+box-shadow:0 20px 60px rgba(0,0,0,0.7);
+
+}
+
+.logo{
+
+font-size:22px;
+
+letter-spacing:4px;
+
+font-weight:600;
+
+margin-bottom:15px;
+
+}
+
+/* TITLE */
+
+h1{
+
+font-size:72px;
+
+background:linear-gradient(90deg,#00f5ff,#7f5af0,#ff00c8);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+background-size:200%;
+
+animation:shine 6s linear infinite;
+
+}
+
+@keyframes shine{
+
+0%{background-position:0%}
+100%{background-position:200%}
+
+}
+
+.subtitle{
+
+opacity:0.8;
+
+margin-top:10px;
+
+margin-bottom:50px;
+
+}
+
+/* COUNTDOWN */
+
+.countdown{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+margin-bottom:40px;
+
+}
+
+.time{
+
+padding:28px;
+
+min-width:120px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,0.05);
+
+border:1px solid rgba(255,255,255,0.1);
+
+transition:0.3s;
+
+}
+
+.time:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 25px rgba(0,245,255,0.6);
+
+}
+
+.time h2{
+
+font-size:40px;
+
+color:#00f5ff;
+
+text-shadow:0 0 12px #00f5ff;
+
+}
+
+.time span{
+
+font-size:13px;
+
+opacity:0.8;
+
+}
+
+/* EMAIL */
+
+.subscribe{
+
+display:flex;
+
+justify-content:center;
+
+margin-top:30px;
+
+}
+
+.subscribe input{
+
+padding:16px;
+
+width:300px;
+
+border:none;
+
+border-radius:40px 0 0 40px;
+
+outline:none;
+
+}
+
+.subscribe button{
+
+padding:16px 30px;
+
+border:none;
+
+border-radius:0 40px 40px 0;
+
+background:linear-gradient(90deg,#7f5af0,#ff00c8);
+
+color:white;
+
+cursor:pointer;
+
+font-weight:600;
+
+}
+
+.subscribe button:hover{
+
+transform:scale(1.05);
+
+}
+
+/* FEATURES */
+
+.features{
+
+padding:100px 40px;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+.features h2{
+
+text-align:center;
+
+font-size:40px;
+
+margin-bottom:60px;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:40px;
+
+}
+
+.card{
+
+padding:35px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,0.05);
+
+border:1px solid rgba(255,255,255,0.1);
+
+transition:0.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 30px rgba(127,90,240,0.6);
+
+}
+
+.card h3{
+
+margin-bottom:10px;
+
+}
+
+/* FOOTER */
+
+footer{
+
+text-align:center;
+
+padding:40px;
+
+opacity:0.6;
+
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+h1{
+font-size:42px;
+}
+
+.container{
+padding:40px 20px;
+}
+
+.subscribe{
+flex-direction:column;
+gap:10px;
+}
+
+.subscribe input{
+width:100%;
+border-radius:40px;
+}
+
+.subscribe button{
+border-radius:40px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="logo">XQARE</div>
+
+<h1>Launching Soon</h1>
+
+<p class="subtitle">
+
+We're building something incredible.
+
+</p>
+
+<div class="countdown">
+
+<div class="time">
+<h2 id="days">00</h2>
+<span>Days</span>
+</div>
+
+<div class="time">
+<h2 id="hours">00</h2>
+<span>Hours</span>
+</div>
+
+<div class="time">
+<h2 id="minutes">00</h2>
+<span>Minutes</span>
+</div>
+
+<div class="time">
+<h2 id="seconds">00</h2>
+<span>Seconds</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="features">
+
+<h2>Why We're Different</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🚀 Fast Platform</h3>
+<p>Blazing fast performance built for modern users.</p>
+</div>
+
+<div class="card">
+<h3>🔒 Secure</h3>
+<p>Enterprise-level security and encryption.</p>
+</div>
+
+<div class="card">
+  <h3>⚡ Job Portal</h3>
+  <p>Discover the best career opportunities across India. Connect with top Indian startups and companies, and get AI-powered job recommendations tailored to your skills and city.</p>
+</div>
+
+<div class="card">
+  <h3>🌎 Community Portal</h3>
+  <p>Join a vibrant Indian professional network. Learn, collaborate, and grow with like-minded people from your city and across India, building meaningful connections locally and nationally.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 XQARE. All Rights Reserved
+
+</footer>
+
+<script>
+
+/* COUNTDOWN */
+
+const launchDate = new Date("March 26, 2026 00:00:00").getTime();
+
+setInterval(function(){
+
+const now = new Date().getTime();
+
+const distance = launchDate - now;
+
+const days = Math.floor(distance/(1000*60*60*24));
+const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+const minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+const seconds = Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("days").innerHTML = days;
+document.getElementById("hours").innerHTML = hours;
+document.getElementById("minutes").innerHTML = minutes;
+document.getElementById("seconds").innerHTML = seconds;
+
+},1000);
+
+
+/* PARTICLES */
+
+particlesJS("particles-js",{
+
+particles:{
+
+number:{value:80},
+
+size:{value:3},
+
+color:{value:"#ffffff"},
+
+line_linked:{enable:true,opacity:0.2},
+
+move:{speed:1.5}
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
